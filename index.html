@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hoja de Vida SIGEP 3.0 al Día · Vibras Positivas HM</title>
+<meta name="description" content="Todo sobre la nueva hoja de vida SIGEP 3.0 de Función Pública: qué cambia, qué ya no te pueden pedir y noticias que se actualizan solas.">
+<meta name="theme-color" content="#0b1d3a">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+<meta property="og:title" content="Hoja de Vida SIGEP 3.0 al Día">
+<meta property="og:description" content="Lo que ya está en verde no se lo pueden volver a pedir. Entérese de todo.">
+<meta property="og:image" content="img/anuncio-presidencia.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b1d3a;--navy2:#13305e;--sky:#1f6feb;--gold:#f5c400;--red:#d7263d;
+  --green:#14a44d;--ink:#0f172a;--mut:#5b6474;--bg:#f3f5f9;--card:#fff;--line:#e3e7ef;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.num{font-family:Archivo,Inter,sans-serif;letter-spacing:-.02em}
+a{color:var(--sky)}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+
+/* Top bar */
+.top{position:sticky;top:0;z-index:50;background:rgba(11,29,58,.92);backdrop-filter:blur(10px);color:#fff}
+.top .wrap{display:flex;align-items:center;gap:10px;height:58px}
+.brand{font-family:Archivo,Inter,system-ui,sans-serif;font-weight:900;font-size:17px;flex:1;line-height:1.1}
+.brand small{display:block;font:500 11px Inter;opacity:.7;letter-spacing:.04em}
+.btn{border:0;border-radius:999px;padding:9px 15px;font:600 13px Inter;cursor:pointer;transition:transform .15s,background .2s}
+.btn:active{transform:scale(.95)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.spin{display:inline-block;animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+/* Ticker */
+.ticker{background:var(--gold);color:var(--navy);overflow:hidden;white-space:nowrap;font:600 13px Inter;height:34px;display:flex;align-items:center}
+.ticker .lab{background:var(--red);color:#fff;padding:0 12px;height:100%;display:flex;align-items:center;font-weight:700;z-index:2;flex:none}
+.ticker .run{display:inline-block;padding-left:100%;animation:tk 60s linear infinite}
+.ticker .run span{margin-right:48px}
+@keyframes tk{to{transform:translateX(-100%)}}
+
+/* Hero */
+.hero{position:relative;min-height:88vh;color:#fff;overflow:hidden;display:flex;align-items:flex-end}
+.slides{position:absolute;inset:0}
+.slides div{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s;animation:kb 18s ease-in-out infinite alternate}
+.slides div.on{opacity:1}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.14) translate(-2%,-2%)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,29,58,.35) 0%,rgba(11,29,58,.75) 55%,rgba(11,29,58,.97) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:44px;padding-top:120px}
+.pill{display:inline-block;background:var(--red);color:#fff;font:700 12px Inter;padding:6px 12px;border-radius:999px;letter-spacing:.06em;text-transform:uppercase;animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 10px rgba(215,38,61,0)}0%{box-shadow:0 0 0 0 rgba(215,38,61,.6)}}
+.hero h1{font-size:clamp(38px,8vw,76px);line-height:.98;margin:16px 0 14px;font-weight:900}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:clamp(16px,2.3vw,20px);max-width:640px;opacity:.92}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:28px}
+.stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px);border-radius:14px;padding:14px}
+.stat .num{font-size:clamp(22px,4vw,34px);font-weight:900;color:var(--gold);line-height:1}
+.stat span{font-size:12.5px;opacity:.85;display:block;margin-top:6px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* Sections */
+section{padding:64px 0;scroll-margin-top:58px}
+.kicker{font:700 12px Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
+h2{font-size:clamp(28px,5vw,44px);line-height:1.05;margin:8px 0 14px;font-weight:900}
+.sub{color:var(--mut);max-width:680px;font-size:17px}
+.card{background:var(--card);border-radius:var(--r);border:1px solid var(--line);padding:22px;box-shadow:0 6px 24px rgba(15,23,42,.05)}
+.reveal{opacity:0;transform:translateY(28px);transition:all .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* Hoy */
+#hoy{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff}
+#hoy .sub{color:#c7d2e6}
+#hoy .kicker{color:var(--gold)}
+.hoygrid{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:22px}
+.hoybox{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:20px}
+.hoybox h3{font-size:15px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.clock{font-family:Archivo,Inter,sans-serif;font-size:clamp(30px,6vw,48px);font-weight:900}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.mini div{background:rgba(255,255,255,.08);border-radius:12px;padding:12px}
+.mini b{font-family:Archivo;font-size:28px;color:var(--gold);display:block}
+.hoynews a{display:flex;gap:12px;color:#fff;text-decoration:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.hoynews img{width:84px;height:62px;object-fit:cover;border-radius:10px;flex:none;background:#24406f}
+.hoynews small{color:#9fb0cc;display:block;font-size:12px;margin-top:2px}
+.dato{margin-top:14px;padding:14px;border-left:4px solid var(--gold);background:rgba(245,196,0,.08);border-radius:8px}
+@media(max-width:780px){.hoygrid{grid-template-columns:1fr}}
+
+/* Antes / ahora */
+.toggle{display:inline-flex;background:var(--line);border-radius:999px;padding:4px;margin:18px 0}
+.toggle button{border:0;background:none;padding:10px 22px;border-radius:999px;font:700 14px Inter;cursor:pointer;color:var(--mut)}
+.toggle button.on{background:var(--navy);color:#fff}
+.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cmp{border-radius:var(--r);padding:20px;color:#fff;min-height:170px;transition:all .45s}
+.cmp h3{font-size:19px;margin-bottom:8px}
+.cmp.antes{background:linear-gradient(140deg,#6b1f2a,#a3283a)}
+.cmp.ahora{background:linear-gradient(140deg,#0d6b3a,#14a44d)}
+@media(max-width:780px){.compare{grid-template-columns:1fr}}
+
+/* Anuncio */
+.anuncio{display:grid;grid-template-columns:1fr 1.1fr;gap:26px;align-items:center}
+.phone{border-radius:28px;overflow:hidden;border:8px solid var(--navy);box-shadow:0 30px 60px rgba(11,29,58,.25);max-height:520px;transform:rotate(-2deg)}
+.phone img{width:100%}
+.quote{font-family:Archivo;font-size:clamp(24px,4vw,36px);font-weight:900;line-height:1.1;color:var(--navy);border-left:6px solid var(--gold);padding-left:16px;margin:16px 0}
+@media(max-width:780px){.anuncio{grid-template-columns:1fr}.phone{max-height:420px}}
+
+/* Integra */
+.integra{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.ent{position:relative;border-radius:var(--r);padding:22px;background:#fff;border:1px solid var(--line);overflow:hidden;transition:transform .25s,box-shadow .25s}
+.ent:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(15,23,42,.1)}
+.ent:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c,var(--sky))}
+.ent .tag{font:700 11px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--c,var(--sky))}
+.ent h3{font-size:20px;margin:6px 0}
+.ent p{color:var(--mut);font-size:14.5px}
+.ent a{font-weight:600;font-size:14px;display:inline-block;margin-top:10px}
+@media(max-width:780px){.integra{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.integra{grid-template-columns:1fr}}
+
+/* Semaforo */
+#verde{background:#eaf7ef}
+.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:20px}
+.chk{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px;cursor:pointer;transition:all .25s;user-select:none}
+.chk .dot{width:22px;height:22px;border-radius:50%;border:3px solid #c8ced9;flex:none;transition:all .25s}
+.chk.on{border-color:var(--green);background:#f3fcf6}
+.chk.on .dot{background:var(--green);border-color:var(--green);box-shadow:0 0 0 5px rgba(20,164,77,.2)}
+.meter{height:16px;background:#d6e9dd;border-radius:999px;overflow:hidden;margin:20px 0 8px}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--green));transition:width .6s}
+.result{font-size:16px;margin-top:8px}
+@media(max-width:600px){.checks{grid-template-columns:1fr}}
+
+/* Carta */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.form label{font:600 13px Inter;color:var(--mut);display:block;margin-bottom:4px}
+.form input,.form select,.form textarea{width:100%;padding:12px;border-radius:12px;border:1px solid #cfd6e3;font:15px Inter;background:#fff}
+.form .full{grid-column:1/-1}
+textarea#carta{min-height:280px;font:14px/1.5 Inter}
+@media(max-width:600px){.form{grid-template-columns:1fr}}
+
+/* Pasos */
+.steps{counter-reset:s;display:grid;gap:12px;margin-top:22px}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step:before{counter-increment:s;content:counter(s);font:900 22px Archivo;color:#fff;background:var(--navy);width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex:none}
+.step h3{font-size:18px}
+.step p{color:var(--mut);font-size:15px}
+
+/* Video */
+.video{position:relative;padding-top:56.25%;border-radius:var(--r);overflow:hidden;margin-top:22px;background:#000;box-shadow:0 20px 50px rgba(0,0,0,.2)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* Noticias */
+.newsbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:16px}
+.newsbar input{flex:1;min-width:200px;padding:12px 16px;border-radius:999px;border:1px solid #cfd6e3;font:15px Inter}
+.status{font-size:13px;color:var(--mut);margin-top:10px}
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.nw{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .25s}
+.nw:hover{transform:translateY(-4px)}
+.nw .ph{height:160px;background:linear-gradient(135deg,var(--navy),var(--sky));background-size:cover;background-position:center;position:relative}
+.nw .ph b{position:absolute;left:10px;top:10px;background:var(--gold);color:var(--navy);font:700 11px Inter;padding:4px 8px;border-radius:6px}
+.nw .tx{padding:14px}
+.nw h3{font-size:16px;line-height:1.25}
+.nw small{color:var(--mut);display:block;margin-top:8px;font-size:12.5px}
+@media(max-width:860px){.news{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.news{grid-template-columns:1fr}}
+
+/* Ojo */
+.ojo{background:#fff6e0;border:1px solid #f1d98a;border-radius:var(--r);padding:20px;margin-top:18px}
+
+footer{background:var(--navy);color:#c7d2e6;padding:40px 0 90px;font-size:14px}
+footer h3{color:#fff;font-size:18px;margin-bottom:10px}
+footer a{color:var(--gold)}
+footer ul{list-style:none;display:grid;gap:6px;margin-top:10px}
+.ad{display:block;margin-top:22px;padding:16px;border-radius:14px;background:linear-gradient(90deg,var(--gold),#ffd84d);color:var(--navy);text-decoration:none;font-weight:700}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(120px);background:var(--navy);color:#fff;padding:12px 20px;border-radius:999px;font:600 14px Inter;z-index:99;transition:transform .35s;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">SIGEP 3.0 al Día<small data-en="VIBRAS POSITIVAS HM · CITIZEN APP">VIBRAS POSITIVAS HM · APP CIUDADANA</small></div>
+    <button class="btn btn-ghost" id="langBtn" aria-label="Idioma">EN</button>
+    <button class="btn btn-gold" id="refreshBtn"><span data-en="Refresh">Actualizar</span></button>
+  </div>
+</header>
+
+<div class="ticker"><div class="lab" data-en="LATEST">ÚLTIMO</div><div style="overflow:hidden;flex:1"><div class="run" id="ticker"><span>Cargando noticias de SIGEP 3.0...</span></div></div></div>
+
+<!-- HERO -->
+<div class="hero" id="inicio">
+  <div class="slides" id="slides"></div>
+  <div class="wrap">
+    <span class="pill" data-en="New · Oct 31, 2026">Nuevo · 31 de octubre de 2026</span>
+    <h1 data-en="Your résumé, <em>only once.</em>">Su hoja de vida, <em>una sola vez.</em></h1>
+    <p class="lead" data-en="The Government launched SIGEP 3.0: work and academic certificates, and Procuraduría, Contraloría, Police and REDAM records, in one place. What is already green cannot be requested again.">El Gobierno lanzó la nueva hoja de vida SIGEP 3.0: certificados laborales y académicos, y antecedentes de Procuraduría, Contraloría, Policía y REDAM, en un solo lugar. Lo que ya está en verde no se lo pueden volver a pedir.</p>
+    <div class="stats">
+      <div class="stat"><div class="num" data-count="0" data-prefix="$">$0</div><span data-en="cost to taxpayers, per Función Pública">costo para el erario, según Función Pública</span></div>
+      <div class="stat"><div class="num" data-count="8000" data-prefix="$" data-suffix=" M">$8.000 M</div><span data-en="what SIGEP II cost, per the director">lo que costó SIGEP II, según el director</span></div>
+      <div class="stat"><div class="num" data-count="4">4</div><span data-en="records integrated: Procuraduría, Contraloría, Police, REDAM">antecedentes integrados: Procuraduría, Contraloría, Policía, REDAM</span></div>
+      <div class="stat"><div class="num" id="diasDic">--</div><span data-en="days to December, target for full operation">días para diciembre, meta de plena operación</span></div>
+    </div>
+    <div class="cta">
+      <a class="btn btn-gold" href="#verde" data-en="Check what they can't ask for">Vea qué ya no le pueden pedir</a>
+      <a class="btn btn-ghost" href="#carta-sec" data-en="Write your letter">Arme su carta</a>
+    </div>
+  </div>
+</div>
+
+<!-- HOY -->
+<section id="hoy">
+  <div class="wrap">
+    <div class="kicker" data-en="Today">Hoy</div>
+    <h2 data-en="What's happening today with SIGEP 3.0">Lo que pasa hoy con SIGEP 3.0</h2>
+    <p class="sub" data-en="This section refreshes every time you open the app: Colombia time, latest news and the fact of the day.">Esta sección se renueva cada vez que entra: hora de Colombia, últimas noticias y el dato del día.</p>
+    <div class="hoygrid">
+      <div class="hoybox">
+        <h3 data-en="Latest news">Últimas noticias</h3>
+        <div class="hoynews" id="hoyNews"><p style="opacity:.7">Buscando...</p></div>
+      </div>
+      <div class="hoybox">
+        <h3 data-en="Colombia time">Hora de Colombia</h3>
+        <div class="clock" id="clock">--:--</div>
+        <div id="fecha" style="opacity:.85"></div>
+        <div class="mini">
+          <div><b id="diasLanz">0</b><span data-en="days since launch">días desde el lanzamiento</span></div>
+          <div><b id="diasDic2">0</b><span data-en="days to December">días para diciembre</span></div>
+        </div>
+        <div class="dato"><b data-en="Fact of the day">Dato del día</b><div id="dato"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANUNCIO -->
+<section id="anuncio">
+  <div class="wrap anuncio">
+    <div class="phone reveal"><img src="img/anuncio-presidencia.jpg" alt="Publicación de Presidencia de Colombia sobre SIGEP III"></div>
+    <div class="reveal">
+      <div class="kicker" data-en="The announcement">El anuncio</div>
+      <h2 data-en="What the Government said">Lo que dijo el Gobierno</h2>
+      <p class="sub" data-en="Presidencia announced that, under President Abelardo De La Espriella, the new SIGEP III résumé built by the Departamento Administrativo de la Función Pública (DAFP) is being implemented, to avoid unnecessary paperwork when signing contracts or taking office.">Presidencia anunció que, bajo el gobierno del presidente Abelardo De La Espriella, se implementa la nueva hoja de vida SIGEP III, estructurada por el Departamento Administrativo de la Función Pública (DAFP), para eliminar trámites innecesarios al firmar contratos o posesionarse en cargos.</p>
+      <div class="quote" data-en="&ldquo;What is already green cannot be requested again.&rdquo;">“Lo que ya está en verde no podrá volver a exigirse.”</div>
+      <p class="sub" data-en="Leonardo Humberto Huerta Gutiérrez, director of Función Pública. He added that asking again for documents already in the system could be grounds for misconduct.">Leonardo Humberto Huerta Gutiérrez, director de Función Pública. Añadió que pedir otra vez documentos que ya están en el sistema podría ser causal de mala conducta.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ANTES / AHORA -->
+<section id="cambia" style="background:#fff">
+  <div class="wrap">
+    <div class="kicker" data-en="What changes">Qué cambia</div>
+    <h2 data-en="Before and now">Antes y ahora</h2>
+    <div class="toggle"><button class="on" data-mode="antes" data-en="Before (SIGEP II)">Antes (SIGEP II)</button><button data-mode="ahora" data-en="Now (SIGEP 3.0)">Ahora (SIGEP 3.0)</button></div>
+    <div class="compare" id="compare"></div>
+  </div>
+</section>
+
+<!-- INTEGRA -->
+<section id="integra">
+  <div class="wrap">
+    <div class="kicker" data-en="All in one">Todo en uno</div>
+    <h2 data-en="What the new résumé brings together">Lo que junta la nueva hoja de vida</h2>
+    <p class="sub" data-en="According to Función Pública, SIGEP 3.0 connects these sources and lets entities verify data with a QR code. While the rollout finishes, keep these official links at hand.">Según Función Pública, SIGEP 3.0 conecta estas fuentes y permite a las entidades verificar los datos con un código QR. Mientras termina la implementación, tenga a mano los enlaces oficiales.</p>
+    <div class="integra">
+      <div class="ent reveal" style="--c:#1f6feb"><div class="tag" data-en="Disciplinary">Disciplinarios</div><h3>Procuraduría</h3><p data-en="Disciplinary records certificate.">Certificado de antecedentes disciplinarios.</p><a href="https://www.procuraduria.gov.co" target="_blank" rel="noopener" data-en="Official site">Sitio oficial</a></div>
+      <div class="ent reveal" style="--c:#7c3aed"><div class="tag" data-en="Fiscal">Fiscales</div><h3>Contraloría</h3><p data-en="Fiscal liability records certificate.">Certificado de antecedentes fiscales.</p><a href="https://www.contraloria.gov.co" target="_blank" rel="noopener" data-en="Official site">Sitio oficial</a></div>
+      <div class="ent reveal" style="--c:#0f766e"><div class="tag" data-en="Criminal">Judiciales</div><h3>Policía Nacional</h3><p data-en="Criminal records check.">Consulta de antecedentes judiciales.</p><a href="https://antecedentes.policia.gov.co:7005/WebJudicial/" target="_blank" rel="noopener" data-en="Check">Consultar</a></div>
+      <div class="ent reveal" style="--c:#d7263d"><div class="tag" data-en="Child support">Alimentos</div><h3>REDAM</h3><p data-en="Registry of Delinquent Child-Support Debtors.">Registro de Deudores Alimentarios Morosos.</p></div>
+      <div class="ent reveal" style="--c:#b45309"><div class="tag" data-en="Work">Laborales</div><h3 data-en="Work certificates">Certificados laborales</h3><p data-en="Once registered, they should not be attached again.">Una vez registrados, no se deben volver a anexar.</p></div>
+      <div class="ent reveal" style="--c:#14a44d"><div class="tag" data-en="Studies">Académicos</div><h3 data-en="Diplomas">Diplomas y actas</h3><p data-en="No more photocopying your high school diploma for every contract.">Se acabó sacarle fotocopia al diploma de bachiller para cada contrato.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VERDE -->
+<section id="verde">
+  <div class="wrap">
+    <div class="kicker" data-en="Your traffic light">Su semáforo</div>
+    <h2 data-en="What do you already have in green?">¿Qué tiene ya en verde?</h2>
+    <p class="sub" data-en="Tap what you already uploaded and had approved in SIGEP. The app tells you what the entity should no longer ask you for on paper. Your data stays only on your phone.">Toque lo que ya tiene cargado y aprobado en el SIGEP. La app le dice qué no le deberían volver a pedir en papel. Sus datos se quedan solo en su celular.</p>
+    <div class="checks" id="checks"></div>
+    <div class="meter"><i id="meter"></i></div>
+    <div class="result" id="result"></div>
+  </div>
+</section>
+
+<!-- CARTA -->
+<section id="carta-sec" style="background:#fff">
+  <div class="wrap">
+    <div class="kicker" data-en="If they ask again">Si se lo vuelven a pedir</div>
+    <h2 data-en="Write your polite request">Arme su solicitud respetuosa</h2>
+    <p class="sub" data-en="If an entity asks again for documents you already have in green, send this request. It invokes the right of petition (Art. 23 of the Constitution, Law 1755 of 2015) and the ban on requesting documents the State already holds (Decree-Law 019 of 2012).">Si una entidad le vuelve a pedir documentos que ya tiene en verde, envíe esta solicitud. Se apoya en el derecho de petición (art. 23 de la Constitución, Ley 1755 de 2015) y en la prohibición de exigir documentos que ya tiene el Estado (Decreto Ley 019 de 2012).</p>
+    <div class="form">
+      <div><label data-en="Full name">Nombre completo</label><input id="fNom" autocomplete="name"></div>
+      <div><label data-en="ID number">Cédula</label><input id="fCed" inputmode="numeric"></div>
+      <div><label data-en="Entity">Entidad</label><input id="fEnt" placeholder="Ej.: Alcaldía de Caucasia"></div>
+      <div><label data-en="City">Ciudad</label><input id="fCiu" value="Caucasia, Antioquia"></div>
+      <div class="full"><label data-en="Process (contract or position)">Proceso (contrato o cargo)</label><input id="fPro" placeholder="Ej.: contrato de prestación de servicios"></div>
+      <div class="full"><textarea id="carta" readonly></textarea></div>
+      <div class="full" style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-navy" id="copyBtn" data-en="Copy">Copiar</button>
+        <button class="btn btn-green" id="waBtn" data-en="Send by WhatsApp">Enviar por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PASOS -->
+<section id="pasos">
+  <div class="wrap">
+    <div class="kicker" data-en="Step by step">Paso a paso</div>
+    <h2 data-en="How to keep your résumé ready">Cómo tener su hoja de vida al día</h2>
+    <div class="steps">
+      <div class="step reveal"><div><h3 data-en="Ask the entity to enable you">Pida que lo habiliten</h3><p data-en="The first time, the entity that requests your résumé is the one that enables your SIGEP username and password.">La primera vez, la entidad que le pide la hoja de vida es la que habilita su usuario y contraseña en el SIGEP.</p></div></div>
+      <div class="step reveal"><div><h3 data-en="Fill in the Single Résumé Form">Llene el Formato Único de Hoja de Vida</h3><p data-en="It is mandatory (Law 190 of 1995 and Decree 1083 of 2015) for public servants and service contractors. Updating it is your responsibility.">Es obligatorio (Ley 190 de 1995 y Decreto 1083 de 2015) para servidores públicos y contratistas de prestación de servicios. Mantenerla al día es responsabilidad suya.</p></div></div>
+      <div class="step reveal"><div><h3 data-en="Upload clear supports">Suba soportes claros</h3><p data-en="ID, diplomas, work certificates with exact dates. Information must match your papers exactly: false data can lead to disciplinary investigations.">Cédula, diplomas, certificados laborales con fechas exactas. Lo que escriba debe coincidir con sus papeles: datos falsos pueden terminar en investigación disciplinaria.</p></div></div>
+      <div class="step reveal"><div><h3 data-en="Wait for the green">Espere el verde</h3><p data-en="When the entity validates a document it turns green. From then on, per the director, it cannot be required again.">Cuando la entidad valida un documento queda en verde. Desde ahí, según el director, no se lo pueden volver a exigir.</p></div></div>
+      <div class="step reveal"><div><h3 data-en="Having problems?">¿Tiene problemas?</h3><p data-en="Write to soportesigep@funcionpublica.gov.co with your ID number, a description of the problem and a screenshot.">Escriba a soportesigep@funcionpublica.gov.co con su número de cédula, la descripción del problema y un pantallazo.</p></div></div>
+    </div>
+    <div class="ojo reveal"><b data-en="Citizen watch:">Ojo ciudadano:</b> <span data-en="Rollout is gradual over the coming months, with full operation expected by December. Infobae also reported a court ruling giving Función Pública five days to fix loading and accessibility problems in the system. If it fails, keep your printed copy and report it.">La implementación es gradual en los próximos meses, con plena operación esperada para diciembre. Infobae además reportó un fallo que le da cinco días a Función Pública para solucionar problemas de carga y accesibilidad del sistema. Si le falla, guarde su copia impresa y repórtelo.</span></div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="kicker" data-en="Video">Video</div>
+    <h2 data-en="This is how it was done before">Así se hacía antes</h2>
+    <p class="sub" data-en="Tutorial for registering your résumé in SIGEP II. Compare it with the new version as it arrives.">Tutorial de registro de la hoja de vida en SIGEP II. Compárelo con la nueva versión a medida que llegue.</p>
+    <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/dyID0UOPrUQ" title="Registro hoja de vida en SIGEP II" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  </div>
+</section>
+
+<!-- NOTICIAS -->
+<section id="noticias">
+  <div class="wrap">
+    <div class="kicker" data-en="News">Noticias</div>
+    <h2 data-en="SIGEP 3.0 news, live">Noticias de SIGEP 3.0, en vivo</h2>
+    <p class="sub" data-en="A robot fetches real news every 30 minutes, and the app also searches live every time you open it.">Un robot trae noticias reales cada 30 minutos y además la app busca en vivo cada vez que la abre.</p>
+    <div class="newsbar">
+      <input id="q" placeholder="Filtrar noticias..." aria-label="Filtrar">
+      <button class="btn btn-navy" id="refresh2" data-en="Search again">Buscar de nuevo</button>
+    </div>
+    <div class="status" id="status"></div>
+    <div class="news" id="news"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h3>Vibras Positivas HM</h3>
+    <p data-en="Independent citizen app. It is not an official Government application. Information from Función Pública and the media cited below.">App ciudadana independiente. No es una aplicación oficial del Gobierno. Información de Función Pública y de los medios citados abajo.</p>
+    <ul>
+      <li><a href="https://www.infobae.com/colombia/2026/10/31/gobierno-lanza-sigep-30-documentos-ya-cargados-no-podran-volver-a-exigirse-a-contratistas-y-funcionarios/" target="_blank" rel="noopener">Infobae · Gobierno lanza SIGEP 3.0 (31 oct 2026)</a></li>
+      <li><a href="https://laveintitres.com/sigep-30-se-estrena-sin-costo-y-elimina-exigir-documentos-ya-cargados-a-contratistas/" target="_blank" rel="noopener">La Veintitrés · SIGEP 3.0 se estrena sin costo</a></li>
+      <li><a href="https://www1.funcionpublica.gov.co/formato-unico-de-hoja-de-vida-persona-natural" target="_blank" rel="noopener">Función Pública · Formato Único de Hoja de Vida</a></li>
+      <li><a href="https://www1.funcionpublica.gov.co/preguntas-frecuentes/-/asset_publisher/sqxafjubsrEu/content/-como-me-registro-en-el-sigep-" target="_blank" rel="noopener">Función Pública · ¿Cómo me registro en el SIGEP?</a></li>
+    </ul>
+    <a class="ad" href="https://vibraspositivashm.com" target="_blank" rel="noopener" data-en="Need an app for your business? Vibras Positivas HM · 311 770 0431">¿Necesita una app para su negocio? Vibras Positivas HM · 311 770 0431</a>
+    <p style="margin-top:16px;opacity:.6" id="ver"></p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(()=>{
+const TZ='America/Bogota';
+const LAUNCH=new Date('2026-10-31T00:00:00-05:00');
+const DEC=new Date('2026-12-01T00:00:00-05:00');
+let LANG=(()=>{try{return localStorage.getItem('lang')||'es'}catch(e){return 'es'}})();
+const $=s=>document.querySelector(s);
+const T=(es,en)=>LANG==='en'?en:es;
+const FALLBACK_IMGS=['img/anuncio-presidencia.jpg','https://uruguayaldia.com.uy/wp-content/uploads/2026/10/TJM3EHRPQRDBHN4YYKIZZYFTXA.jpg'];
+
+/* ---------- Idioma ---------- */
+function applyLang(){
+  document.documentElement.lang=LANG;
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    if(el.dataset.es===undefined) el.dataset.es=el.innerHTML;
+    el.innerHTML=LANG==='en'?el.dataset.en:el.dataset.es;
+  });
+  $('#langBtn').textContent=LANG==='en'?'ES':'EN';
+  $('#q').placeholder=T('Filtrar noticias...','Filter news...');
+  renderCompare();renderChecks();renderCarta();renderHoy();renderNews();tick();
+}
+$('#langBtn').onclick=()=>{LANG=LANG==='es'?'en':'es';try{localStorage.setItem('lang',LANG)}catch(e){}applyLang()};
+
+/* ---------- Reloj y contadores ---------- */
+const dayMs=864e5;
+function bogotaNow(){return new Date()}
+function tick(){
+  const n=bogotaNow();
+  $('#clock').textContent=n.toLocaleTimeString(LANG==='en'?'en-US':'es-CO',{timeZone:TZ,hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  $('#fecha').textContent=n.toLocaleDateString(LANG==='en'?'en-US':'es-CO',{timeZone:TZ,weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  const dl=Math.max(0,Math.floor((n-LAUNCH)/dayMs));
+  const dd=Math.max(0,Math.ceil((DEC-n)/dayMs));
+  $('#diasLanz').textContent=dl;$('#diasDic2').textContent=dd;$('#diasDic').textContent=dd;
+}
+setInterval(tick,1000);
+
+/* ---------- Dato del día ---------- */
+const DATOS=[
+ ['SIGEP 3.0 fue construido por el equipo técnico de Función Pública, sin contratos externos.','SIGEP 3.0 was built by Función Pública\'s own technical team, without outside contracts.'],
+ ['Pedir de nuevo un documento que ya está en el sistema podría ser causal de mala conducta, según el director Huerta.','Asking again for a document already in the system could be misconduct, according to director Huerta.'],
+ ['Las entidades podrán verificar la información con un código QR.','Entities will be able to verify the information with a QR code.'],
+ ['El Formato Único de Hoja de Vida nació con la Ley 190 de 1995.','The Single Résumé Form was created by Law 190 of 1995.'],
+ ['El SIGEP no es una bolsa de empleo: sirve para validar que usted cumple los requisitos del cargo.','SIGEP is not a job board: it validates that you meet the job requirements.'],
+ ['La meta del Gobierno es que en diciembre la plataforma opere plenamente.','The Government\'s goal is full operation by December.'],
+ ['El REDAM es el Registro de Deudores Alimentarios Morosos, y ahora se integra a la hoja de vida.','REDAM, the registry of delinquent child-support debtors, is now integrated into the résumé.']
+];
+
+/* ---------- Antes / ahora ---------- */
+let MODE='antes';
+const CMP={
+ antes:[['Papeles repetidos','Repeated paperwork','Cada contrato o posesión: otra vez certificados laborales, académicos y copia de la hoja de vida.','Every contract or appointment: work and academic certificates and a résumé copy, all over again.'],
+        ['Varias plataformas','Several platforms','Entrar por separado a Procuraduría, Contraloría y Policía a sacar antecedentes.','Visiting Procuraduría, Contraloría and Police sites separately to get records.'],
+        ['Sistema costoso','Costly system','SIGEP II costó cerca de $8.000 millones, según el director de Función Pública.','SIGEP II cost about COP 8 billion, according to Función Pública\'s director.']],
+ ahora:[['Una sola vez','Only once','Lo que ya está en verde no se lo pueden volver a exigir para contratar o posesionarse.','What is already green cannot be required again to sign a contract or take office.'],
+        ['Todo integrado','All integrated','Procuraduría, Contraloría, Policía y REDAM conectados, con verificación por código QR.','Procuraduría, Contraloría, Police and REDAM connected, with QR-code verification.'],
+        ['Costo cero','Zero cost','Desarrollado por el equipo de Función Pública a $0 para el erario, según la entidad.','Built by Función Pública\'s team at no cost to taxpayers, per the agency.']]
+};
+function renderCompare(){
+  $('#compare').innerHTML=CMP[MODE].map(c=>`<div class="cmp ${MODE} reveal in"><h3>${T(c[0],c[1])}</h3><p>${T(c[2],c[3])}</p></div>`).join('');
+  document.querySelectorAll('.toggle button').forEach(b=>b.classList.toggle('on',b.dataset.mode===MODE));
+}
+document.querySelectorAll('.toggle button').forEach(b=>b.onclick=()=>{MODE=b.dataset.mode;renderCompare()});
+let autoT=setInterval(()=>{MODE=MODE==='antes'?'ahora':'antes';renderCompare()},5000);
+$('.toggle').addEventListener('click',()=>clearInterval(autoT));
+
+/* ---------- Semáforo ---------- */
+const DOCS=[
+ ['lab','Certificados laborales','Work certificates'],
+ ['aca','Diplomas y actas de grado','Diplomas and degree records'],
+ ['ced','Cédula','National ID'],
+ ['pro','Antecedentes Procuraduría','Procuraduría records'],
+ ['con','Antecedentes Contraloría','Contraloría records'],
+ ['pol','Antecedentes Policía','Police records'],
+ ['red','Consulta REDAM','REDAM check'],
+ ['hv','Hoja de vida SIGEP completa','Complete SIGEP résumé']
+];
+let SEL=(()=>{try{return JSON.parse(localStorage.getItem('verdes')||'[]')}catch(e){return []}})();
+function renderChecks(){
+  $('#checks').innerHTML=DOCS.map(d=>`<div class="chk ${SEL.includes(d[0])?'on':''}" data-k="${d[0]}" role="checkbox" aria-checked="${SEL.includes(d[0])}" tabindex="0"><span class="dot"></span><span>${T(d[1],d[2])}</span></div>`).join('');
+  document.querySelectorAll('.chk').forEach(el=>{
+    const f=()=>{const k=el.dataset.k;SEL=SEL.includes(k)?SEL.filter(x=>x!==k):[...SEL,k];try{localStorage.setItem('verdes',JSON.stringify(SEL))}catch(e){}renderChecks();renderCarta()};
+    el.onclick=f;el.onkeydown=e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();f()}};
+  });
+  const p=Math.round(SEL.length/DOCS.length*100);
+  $('#meter').style.width=p+'%';
+  const names=DOCS.filter(d=>SEL.includes(d[0])).map(d=>T(d[1],d[2]));
+  $('#result').innerHTML=SEL.length
+    ? T(`<b>${p}% en verde.</b> No le deberían volver a pedir en papel: ${names.join(', ')}.`,`<b>${p}% green.</b> They should not ask you again on paper for: ${names.join(', ')}.`)
+    : T('Toque los documentos que ya tiene aprobados.','Tap the documents you already have approved.');
+}
+
+/* ---------- Carta ---------- */
+function renderCarta(){
+  const v=id=>($(id).value||'').trim();
+  const nom=v('#fNom')||'[Nombre]',ced=v('#fCed')||'[Cédula]',ent=v('#fEnt')||'[Entidad]',ciu=v('#fCiu')||'[Ciudad]',pro=v('#fPro')||'[proceso]';
+  const docs=DOCS.filter(d=>SEL.includes(d[0])).map(d=>'- '+d[1]).join('\n')||'- [documentos que ya tiene en verde en el SIGEP]';
+  const f=new Date().toLocaleDateString('es-CO',{timeZone:TZ,day:'numeric',month:'long',year:'numeric'});
+  $('#carta').value=`${ciu}, ${f}
+
+Señores
+${ent}
+Oficina de Talento Humano / Contratación
+
+Asunto: Derecho de petición – documentos que ya reposan en el SIGEP
+
+Yo, ${nom}, identificado(a) con cédula ${ced}, en ejercicio del derecho de petición (artículo 23 de la Constitución Política y Ley 1755 de 2015), respetuosamente solicito que, para el ${pro}, no se me exijan de nuevo los siguientes documentos, que ya se encuentran registrados y validados en mi hoja de vida del SIGEP:
+
+${docs}
+
+Fundamento mi solicitud en el artículo 9 del Decreto Ley 019 de 2012, que prohíbe exigir documentos que ya reposan en las entidades del Estado, y en la implementación de la hoja de vida SIGEP 3.0 del Departamento Administrativo de la Función Pública, que integra certificados laborales y académicos y antecedentes de Procuraduría, Contraloría, Policía y REDAM, verificables mediante código QR.
+
+Solicito que la entidad consulte directamente dicha información en el sistema y me informe por escrito si existe algún documento adicional que deba aportar y su fundamento legal.
+
+Atentamente,
+
+${nom}
+C.C. ${ced}`;
+}
+['#fNom','#fCed','#fEnt','#fCiu','#fPro'].forEach(id=>$(id).addEventListener('input',renderCarta));
+$('#copyBtn').onclick=async()=>{try{await navigator.clipboard.writeText($('#carta').value);toast(T('Carta copiada','Letter copied'))}catch(e){$('#carta').select();document.execCommand('copy');toast(T('Carta copiada','Letter copied'))}};
+$('#waBtn').onclick=()=>window.open('https://wa.me/?text='+encodeURIComponent($('#carta').value),'_blank');
+
+/* ---------- Noticias ---------- */
+let NEWS=[];
+const norm=s=>(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+const RELEVANT=/sigep|hoja de vida|funcion publica|dafp/;
+function addNews(list){
+  const seen=new Set(NEWS.map(n=>norm(n.title).slice(0,60)));
+  list.forEach(n=>{
+    if(!n||!n.title||!n.url)return;
+    const k=norm(n.title).slice(0,60);
+    if(seen.has(k))return;
+    if(!RELEVANT.test(norm(n.title+' '+(n.desc||''))))return;
+    seen.add(k);NEWS.push(n);
+  });
+  NEWS.sort((a,b)=>new Date(b.date||0)-new Date(a.date||0));
+}
+function fmtDate(d){
+  if(!d)return '';const x=new Date(d);if(isNaN(x))return '';
+  return x.toLocaleString(LANG==='en'?'en-US':'es-CO',{timeZone:TZ,day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+}
+function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function imgOf(n,i){return n.image||FALLBACK_IMGS[i%FALLBACK_IMGS.length]}
+function renderNews(){
+  const q=norm($('#q').value);
+  const list=NEWS.filter(n=>!q||norm(n.title+' '+n.source).includes(q));
+  $('#news').innerHTML=list.length?list.slice(0,30).map((n,i)=>`<a class="nw reveal in" href="${esc(n.url)}" target="_blank" rel="noopener"><div class="ph" style="background-image:url('${esc(imgOf(n,i))}')"><b>${esc(n.source||'')}</b></div><div class="tx"><h3>${esc(n.title)}</h3><small>${fmtDate(n.date)}</small></div></a>`).join('')
+    :`<p class="sub">${T('No hay noticias con ese filtro.','No news match that filter.')}</p>`;
+  $('#ticker').innerHTML=(NEWS.length?NEWS.slice(0,10):[{title:T('SIGEP 3.0: lo que ya está en verde no podrá volver a exigirse','SIGEP 3.0: what is green cannot be required again')}]).map(n=>`<span>${esc(n.title)}</span>`).join('');
+  renderHoy();renderSlides();
+}
+function renderHoy(){
+  const n=new Date();
+  const idx=Math.floor((n-LAUNCH)/dayMs);
+  const d=DATOS[((idx%DATOS.length)+DATOS.length)%DATOS.length];
+  $('#dato').textContent=T(d[0],d[1]);
+  const top=NEWS.slice(0,4);
+  $('#hoyNews').innerHTML=top.length?top.map((x,i)=>`<a href="${esc(x.url)}" target="_blank" rel="noopener"><img src="${esc(imgOf(x,i))}" alt="" loading="lazy" onerror="this.src='img/anuncio-presidencia.jpg'"><div>${esc(x.title)}<small>${esc(x.source||'')} · ${fmtDate(x.date)}</small></div></a>`).join('')
+    :`<p style="opacity:.7">${T('Buscando noticias...','Searching for news...')}</p>`;
+}
+let slideTimer;
+function renderSlides(){
+  const imgs=[...new Set([...NEWS.map(n=>n.image).filter(Boolean),...FALLBACK_IMGS])].slice(0,8);
+  const box=$('#slides');
+  if(box.dataset.k===imgs.join('|'))return;
+  box.dataset.k=imgs.join('|');
+  box.innerHTML=imgs.map((u,i)=>`<div class="${i===0?'on':''}" style="background-image:url('${u.replace(/'/g,'%27')}')"></div>`).join('');
+  clearInterval(slideTimer);let i=0;
+  slideTimer=setInterval(()=>{const s=box.children;if(s.length<2)return;s[i].classList.remove('on');i=(i+1)%s.length;s[i].classList.add('on')},6000);
+}
+async function loadRobot(){
+  try{
+    const r=await fetch('data/noticias.json?t='+Date.now(),{cache:'no-store'});
+    const j=await r.json();addNews(j.items||[]);
+    $('#ver').textContent=T('Robot actualizado: ','Robot updated: ')+fmtDate(j.updated);
+  }catch(e){}
+}
+async function liveSearch(){
+  const qs=['SIGEP','"hoja de vida" "Función Pública"'];
+  for(const q of qs){
+    try{
+      const u='https://api.gdeltproject.org/api/v2/doc/doc?query='+encodeURIComponent(q+' sourcelang:spanish')+'&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=3months';
+      const r=await fetch(u);const j=await r.json();
+      addNews((j.articles||[]).map(a=>({title:a.title,url:a.url,source:a.domain,image:a.socialimage||'',date:a.seendate?a.seendate.replace(/(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z/,'$1-$2-$3T$4:$5:$6Z'):''})));
+    }catch(e){}
+  }
+}
+async function refresh(manual){
+  const b=$('#refreshBtn');b.disabled=true;
+  $('#status').textContent=T('Buscando noticias en vivo...','Searching live news...');
+  await loadRobot();renderNews();
+  await liveSearch();renderNews();
+  $('#status').textContent=T(`${NEWS.length} noticias · actualizado ${fmtDate(new Date())}`,`${NEWS.length} stories · updated ${fmtDate(new Date())}`);
+  b.disabled=false;if(manual)toast(T('Listo, todo actualizado','Done, everything updated'));
+}
+$('#refreshBtn').onclick=()=>refresh(true);
+$('#refresh2').onclick=()=>refresh(true);
+$('#q').addEventListener('input',renderNews);
+
+/* ---------- Contadores animados y revelado ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('[data-count]').forEach(el=>{
+  const to=+el.dataset.count,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';if(!to)return;
+  let s=null;const step=t=>{if(!s)s=t;const p=Math.min(1,(t-s)/1600);el.textContent=pre+Math.round(to*(1-Math.pow(1-p,3))).toLocaleString('es-CO')+suf;if(p<1)requestAnimationFrame(step)};
+  requestAnimationFrame(step);
+});
+
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+
+/* ---------- Arranque ---------- */
+applyLang();
+refresh(false);
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+})();
+</script>
+</body>
+</html>
